@@ -3,7 +3,7 @@ import { FaDonate, FaHandHoldingUsd, FaQrcode } from "react-icons/fa";
 
 const Cards = () => {
   return (
-    <div className="flex flex-wrap justify-center gap-8 mt-12 px-4">
+    <div className="flex flex-wrap justify-center gap-6 mt-12 px-4">
       {[
         {
           icon: <FaDonate className="text-3xl text-indigo-400 transition-transform duration-500 group-hover:scale-110 group-hover:animate-pulse" />,
@@ -23,12 +23,12 @@ const Cards = () => {
       ].map((item, i) => (
         <div
           key={i}
-          className="flex flex-col items-center max-w-[200px] p-5 rounded-xl bg-gray-800/70 backdrop-blur-sm shadow-md border border-gray-700 hover:shadow-xl  transform hover:scale-105 transition duration-300 cursor-pointer group"
+          className="flex flex-col items-center w-full sm:w-[45%] md:w-[200px] p-5 rounded-xl bg-gray-800/70 backdrop-blur-sm shadow-md border border-gray-700 hover:shadow-xl transform hover:scale-105 transition duration-300 cursor-pointer group"
         >
           <div className="p-5 rounded-full bg-gray-900 shadow-lg flex items-center justify-center mb-4">
             {item.icon}
           </div>
-          <h3 className="font-extrabold text-lg text-white mb-2">{item.title}</h3>
+          <h3 className="font-extrabold text-lg text-white mb-2 text-center">{item.title}</h3>
           <p className="text-center text-gray-300 text-sm leading-relaxed">{item.desc}</p>
         </div>
       ))}
@@ -37,5 +37,3 @@ const Cards = () => {
 };
 
 export default Cards;
-
-

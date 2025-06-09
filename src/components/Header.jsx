@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { FaRupeeSign, FaGithub, FaHandHoldingUsd } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 
+
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
 
@@ -15,6 +16,7 @@ const Header = () => {
   }, []);
 
   return (
+    <>
     <header
       className={`fixed w-full top-0 z-50 transition-all duration-300 ${
         scrolled
@@ -37,19 +39,19 @@ const Header = () => {
       </h1>
     </motion.div>
 
-        <motion.a
-          initial={{ opacity: 0, x: 20 }}
-          animate={{ opacity: 1, x: 0 }}
-          href="https://github.com/debapriyo007/fund-seva"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex items-center gap-2 px-5 py-2 rounded-lg bg-gray-800 hover:bg-gray-700 transition-all text-white font-medium text-xl"
-        >
-          <FaGithub className="text-2xl w-8 h-8" />
-          {/* GitHub */}
-        </motion.a>
+              <a
+               href="https://github.com/debapriyo007/fund-seva" // Replace with your actual GitHub repo link
+               target="_blank"
+               rel="noopener noreferrer"
+               className="flex items-center gap-2 bg-gray-800 hover:bg-gray-700 text-white font-medium py-2 px-4 rounded-lg transition"
+             >
+               <FaGithub className="text-2xl" />
+               Contribute
+             </a>
+        
       </div>
     </header>
+    </>
   );
 };
 

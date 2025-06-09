@@ -5,6 +5,9 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import Cards from './components/Cards';
 import { FaRupeeSign, FaTrash } from 'react-icons/fa';
+import AboutProjectBanner from './components/AboutProjectBanner';
+import PaymentAppsCarousel from './components/PaymentAppsCarousel';
+
 
 function App() {
   const [fundingRequests, setFundingRequests] = useState([]);
@@ -45,9 +48,10 @@ function App() {
 
   return (
     <div className="min-h-screen bg-gray-900 text-white transition-colors duration-300">
+      
       <Header />
 
-      <main className="container mx-auto px-4 py-8 pt-20">
+      <main className="container mx-auto px-4 py-8 pt-28">
         {!activeRequest ? (
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12 mt-10">
@@ -70,6 +74,7 @@ function App() {
             darkMode={true}
           />
         )}
+        {/* <Cards /> */}
 
         {fundingRequests.length > 0 && !activeRequest && (
           <div className="mt-16 max-w-5xl mx-auto">
@@ -121,7 +126,9 @@ function App() {
           </div>
         )}
       </main>
-
+     
+      <AboutProjectBanner/>
+      <PaymentAppsCarousel/>
       <Footer />
     </div>
   );
