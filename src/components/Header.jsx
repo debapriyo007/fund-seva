@@ -40,7 +40,7 @@ const Header = () => {
         <motion.a
           initial={{ opacity: 0, x: 20 }}
           animate={{ opacity: 1, x: 0 }}
-          href="https://github.com/debapriyo007"
+          href="https://github.com/debapriyo007/fund-seva"
           target="_blank"
           rel="noopener noreferrer"
           className="flex items-center gap-2 px-5 py-2 rounded-lg bg-gray-800 hover:bg-gray-700 transition-all text-white font-medium text-xl"
